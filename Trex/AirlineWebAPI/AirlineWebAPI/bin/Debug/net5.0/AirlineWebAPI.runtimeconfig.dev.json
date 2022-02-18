@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Trexe\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Trexe\\.nuget\\packages"
+    ]
+  }
+}
