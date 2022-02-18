@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MVCRecap.Models.DestinationModel>
+
+@{
+    ViewData["Title"] = "Cities";
+    <link rel="stylesheet" href="~/css/TrexStyle.css" />
+}
+<!DOCTYPE html>
+<html>
+<body class="custom">
+    <h1 style="margin-bottom: 50px">Available Cities</h1>
+
+
+    <table class="table" style="border-collapse: collapse">
+        <thead style="background-color: deepskyblue">
+            <tr>
+                <th style="border-top: 1px solid deepskyblue; border-bottom: 2px solid black">
+                   <b style="font-size:larger">@Html.DisplayNameFor(model => model.City)</b>
+                </th>
+            </tr>
+        </thead>
+        <tbody style="background-color: lightskyblue">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                       <b>@Html.DisplayFor(modelItem => item.City)</b>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

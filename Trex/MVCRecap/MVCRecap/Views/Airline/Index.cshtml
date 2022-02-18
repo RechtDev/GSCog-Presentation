@@ -1,0 +1,39 @@
+﻿@model IEnumerable<MVCRecap.Models.AirlineModel>
+@{
+    ViewData["Title"] = "Airlines";
+    <link rel="stylesheet" href="~/css/TrexStyle.css" />
+}
+<!DOCTYPE html>
+<html>
+<body class="custom">
+    <h1 style="margin-bottom: 50px">Available Airlines</h1>
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead style="background-color: deepskyblue; border-collapse: collapse">
+                <tr>
+                    <th style="border-top: 1px solid deepskyblue; border-bottom: 2px solid black">
+                        <b style="font-size:larger">@Html.DisplayNameFor(model => model.Name)</b>
+                    </th>
+                    <th style="border-top: 1px solid deepskyblue; border-bottom: 2px solid black; text-align: center">
+                        <b style="font-size:larger">Availability</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody style="background-color: lightskyblue">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <b>@Html.DisplayFor(modelItem => item.Name)</b>
+                        </td>
+                        <td style="text-align:center">
+                            <b> @Html.DisplayFor(modelItem => item.available)</b>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

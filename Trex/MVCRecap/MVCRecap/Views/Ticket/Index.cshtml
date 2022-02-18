@@ -1,0 +1,65 @@
+﻿@model IEnumerable<MVCRecap.Models.TicketModel>
+
+@{
+    ViewData["Title"] = "Index";
+    <link rel="stylesheet" href="~/css/TrexStyle.css" />
+}
+<!DOCTYPE html>
+<html>
+<body class="custom">
+    <h1 style="margin-bottom: 50px">Active Tickets</h1>
+
+    <p>
+        <a class="btn btn-success" asp-action="Create">Create New</a>
+    </p>
+
+    <table class="table">
+        <thead style="background-color: deepskyblue; border-collapse: collapse; border-bottom: 1px solid black">
+            <tr>
+                <th style="border-top: 1px solid deepskyblue; border-bottom: 2px solid black">
+                    <b> @Html.DisplayNameFor(model => model.Airline)</b>
+                </th>
+                <th style="border-top: 1px solid deepskyblue; border-bottom: 2px solid black">
+                    <b> @Html.DisplayNameFor(model => model.Origin)</b>
+                </th>
+                <th style="border-top: 1px solid deepskyblue; border-bottom: 2px solid black">
+                    <b> @Html.DisplayNameFor(model => model.Destination)</b>
+                </th>
+                <th style="border-top: 1px solid deepskyblue; border-bottom: 2px solid black">
+                    <b> @Html.DisplayNameFor(model => model.Cost)</b>
+                </th>
+                <th style="border-top: 1px solid deepskyblue; border-bottom: 2px solid black">
+                    <b> @Html.DisplayNameFor(model => model.Date)</b>
+                </th>
+                <th style="border-top: 1px solid deepskyblue; border-bottom: 2px solid black"></th>
+            </tr>
+        </thead>
+        <tbody style="background-color: lightskyblue">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <b>@Html.DisplayFor(modelItem => item.Airline)</b>
+                    </td>
+                    <td>
+                        <b> @Html.DisplayFor(modelItem => item.Origin)</b>
+                    </td>
+                    <td>
+                        <b> @Html.DisplayFor(modelItem => item.Destination)</b>
+                    </td>
+                    <td>
+                        <b> @Html.DisplayFor(modelItem => item.Cost)</b>
+                    </td>
+                    <td>
+                        <b> @Html.DisplayFor(modelItem => item.Date)</b>
+                    </td>
+                    <td>
+                        <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.TicketID">Edit</a> &nbsp;
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.TicketID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

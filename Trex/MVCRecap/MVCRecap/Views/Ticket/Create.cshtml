@@ -1,0 +1,63 @@
+﻿@model MVCRecap.Models.TicketModel
+
+@{
+    ViewData["Title"] = "Create";
+    <link rel="stylesheet" href="~/css/TrexStyle.css" />
+}
+<!DOCTYPE html>
+<html>
+<body class="custom">
+    <h1>Create</h1>
+
+    <h4>TicketModel</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Airline" class="control-label" style="font-weight:bold"></label>
+                    <select asp-for="Airline"
+                            class="form-control"
+                            asp-items="@(new SelectList(@ViewBag.ListofAirlines,"Name","Name"))"></select>
+                    <span asp-validation-for="Airline" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Origin" class="control-label" style="font-weight:bold"></label>
+                    <select asp-for="Origin"
+                            class="form-control"
+                            asp-items="@(new SelectList(@ViewBag.ListofCities,"City","City"))"></select>
+                    <span asp-validation-for="Origin" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Destination" class="control-label" style="font-weight:bold"></label>
+                    <select asp-for="Destination"
+                            class="form-control"
+                            asp-items="@(new SelectList(@ViewBag.ListofCities,"City","City"))"></select>
+                    <span asp-validation-for="Destination" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Cost" class="control-label" style="font-weight:bold"></label>
+                    <input asp-for="Cost" class="form-control" />
+                    <span asp-validation-for="Cost" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Date" class="control-label" style="font-weight:bold"></label>
+                    <input asp-for="Date" class="form-control" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <a class="btn btn-warning" asp-action="Index">Back to List</a>
+                    <input type="submit" value="Create" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+@section Scripts {
+
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
