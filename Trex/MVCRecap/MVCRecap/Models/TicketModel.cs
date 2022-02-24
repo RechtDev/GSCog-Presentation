@@ -20,5 +20,6 @@ namespace MVCRecap.Models
         [DataType(DataType.Currency)]
         public double Cost { get; set; }
         public DateTime Date { get; set; }
+
     }
 }

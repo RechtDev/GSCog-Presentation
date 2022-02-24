@@ -31,7 +31,6 @@ namespace MVCRecap.Controllers
 
             List<AirlineModel> airlineList = new();
 
-
             foreach (var item in tempList)
             {
                 if (item.available == true)
@@ -40,6 +39,8 @@ namespace MVCRecap.Controllers
                 }
             }
             tempList = null;
+
+            
 
             List<DestinationModel> cityList = new List<DestinationModel>();
             cityList = (from item in _context.DestinationModel
@@ -51,17 +52,17 @@ namespace MVCRecap.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(TicketModel ticket)
+        public IActionResult Create(TicketModel ticket)
         {
+
             if (ModelState.IsValid)
-            {
-                
-                _context.TicketModel.Add(ticket);
-                _context.SaveChanges();
-                return RedirectToAction("Index");
+            {                
+                    _context.TicketModel.Add(ticket);
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");                
             }
             else
-                return View(ticket);
+                return RedirectToAction("Create");
         }
 
         public async Task<IActionResult> Edit(int? id)
@@ -108,7 +109,7 @@ namespace MVCRecap.Controllers
                 return RedirectToAction("Index");
             }
             else
-                return View(ticket);
+                return RedirectToAction("Edit");
         }
 
         public async Task<IActionResult> Delete(int? id)

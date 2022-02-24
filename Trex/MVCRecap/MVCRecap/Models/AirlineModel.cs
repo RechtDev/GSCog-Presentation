@@ -14,5 +14,6 @@ namespace MVCRecap.Models
         public string Name { get; set; }
         [Required]
         public bool available { get; set; }
+
     }
 }

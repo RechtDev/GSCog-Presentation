@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 
-    <body class="custom">
+<body class="custom">
     <h1>Edit</h1>
 
     <h4>TicketModel</h4>
@@ -21,21 +21,27 @@
                     <label asp-for="Airline" class="control-label" style="font-weight:bold"></label>
                     <select asp-for="Airline"
                             class="form-control"
-                            asp-items="@(new SelectList(@ViewBag.ListofAirlines,"Name","Name"))"></select>
+                            asp-items="@(new SelectList(@ViewBag.ListofAirlines,"Name","Name"))">
+                        <option value=" " hidden disabled selected>Select</option>
+                    </select>
                     <span asp-validation-for="Airline" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Origin" class="control-label" style="font-weight:bold"></label>
                     <select asp-for="Origin"
-                            class="form-control"
-                            asp-items="@(new SelectList(@ViewBag.ListofCities,"City","City"))"></select>
+                            class="form-control" id="originList"
+                            asp-items="@(new SelectList(@ViewBag.ListofCities,"City","City"))">
+                        <option value=" " hidden disabled selected>Select</option>
+                    </select>
                     <span asp-validation-for="Origin" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Destination" class="control-label" style="font-weight:bold"></label>
                     <select asp-for="Destination"
-                            class="form-control"
-                            asp-items="@(new SelectList(@ViewBag.ListofCities,"City","City"))"></select>
+                            class="form-control" id="destinationList"
+                            asp-items="@(new SelectList(@ViewBag.ListofCities,"City","City"))">
+                        <option value=" " hidden disabled selected>Select</option>
+                    </select>
                     <span asp-validation-for="Destination" class="text-danger"></span>
                 </div>
                 <div class="form-group">
@@ -45,19 +51,37 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="Date" class="control-label" style="font-weight:bold"></label>
-                    <input asp-for="Date" class="form-control" />
+                    <input asp-for="Date" class="form-control" id="datePick"/>
                     <span asp-validation-for="Date" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <a class="btn btn-warning" asp-action="Index">Back to List</a>
                     &nbsp;&nbsp;&nbsp;
-                    <input type="submit" value="Update" class="btn btn-success" />
+                    <input type="submit" id="btnSubmit" value="Update" class="btn btn-success" />
                 </div>
             </form>
         </div>
     </div>
 
-    </body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#btnSubmit").click(function () {
+                var origin = $("#originList");
+                var destination = $("#destinationList")
+                if (origin.val() == destination.val()) {
+                    //If the "Please Select" option is selected display error.
+                    alert("Origin and Destination must be different.");
+                    return false;
+                }
+
+                return true;
+            });
+        });
+    </script>
+
+</body>
 </html>
 @section Scripts {
 
