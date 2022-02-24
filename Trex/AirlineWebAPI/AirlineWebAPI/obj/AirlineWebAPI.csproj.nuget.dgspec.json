@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Trexe\\source\\repos\\AirlineWebAPI\\AirlineWebAPI\\AirlineWebAPI.csproj": {}
+    "C:\\Users\\Trexe\\OneDrive\\Documents\\GitHub\\GSCog-Presentation\\Trex\\AirlineWebAPI\\AirlineWebAPI\\AirlineWebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Trexe\\source\\repos\\AirlineWebAPI\\AirlineWebAPI\\AirlineWebAPI.csproj": {
+    "C:\\Users\\Trexe\\OneDrive\\Documents\\GitHub\\GSCog-Presentation\\Trex\\AirlineWebAPI\\AirlineWebAPI\\AirlineWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Trexe\\source\\repos\\AirlineWebAPI\\AirlineWebAPI\\AirlineWebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Trexe\\OneDrive\\Documents\\GitHub\\GSCog-Presentation\\Trex\\AirlineWebAPI\\AirlineWebAPI\\AirlineWebAPI.csproj",
         "projectName": "AirlineWebAPI",
-        "projectPath": "C:\\Users\\Trexe\\source\\repos\\AirlineWebAPI\\AirlineWebAPI\\AirlineWebAPI.csproj",
+        "projectPath": "C:\\Users\\Trexe\\OneDrive\\Documents\\GitHub\\GSCog-Presentation\\Trex\\AirlineWebAPI\\AirlineWebAPI\\AirlineWebAPI.csproj",
         "packagesPath": "C:\\Users\\Trexe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Trexe\\source\\repos\\AirlineWebAPI\\AirlineWebAPI\\obj\\",
+        "outputPath": "C:\\Users\\Trexe\\OneDrive\\Documents\\GitHub\\GSCog-Presentation\\Trex\\AirlineWebAPI\\AirlineWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Trexe\\AppData\\Roaming\\NuGet\\NuGet.Config",

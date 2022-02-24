@@ -53,9 +53,9 @@ namespace MVCRecap.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(TicketModel ticket)
         {
-
             if (ModelState.IsValid)
             {
+                
                 _context.TicketModel.Add(ticket);
                 _context.SaveChanges();
                 return RedirectToAction("Index");

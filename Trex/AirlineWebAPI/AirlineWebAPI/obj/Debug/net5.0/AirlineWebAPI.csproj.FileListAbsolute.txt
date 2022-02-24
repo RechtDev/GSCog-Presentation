@@ -1,0 +1,7 @@
+C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\AirlineWebAPI\AirlineWebAPI\obj\Debug\net5.0\AirlineWebAPI.csproj.AssemblyReference.cache
+C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\AirlineWebAPI\AirlineWebAPI\obj\Debug\net5.0\AirlineWebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\AirlineWebAPI\AirlineWebAPI\obj\Debug\net5.0\AirlineWebAPI.AssemblyInfoInputs.cache
+C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\AirlineWebAPI\AirlineWebAPI\obj\Debug\net5.0\AirlineWebAPI.AssemblyInfo.cs
+C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\AirlineWebAPI\AirlineWebAPI\obj\Debug\net5.0\AirlineWebAPI.csproj.CoreCompileInputs.cache
+C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\AirlineWebAPI\AirlineWebAPI\obj\Debug\net5.0\AirlineWebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\AirlineWebAPI\AirlineWebAPI\obj\Debug\net5.0\AirlineWebAPI.MvcApplicationPartsAssemblyInfo.cache

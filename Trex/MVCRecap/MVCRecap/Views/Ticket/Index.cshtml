@@ -10,7 +10,7 @@
     <h1 style="margin-bottom: 50px">Active Tickets</h1>
 
     <p>
-        <a class="btn btn-success" asp-action="Create">Create New</a>
+        <a class="btn btn-success" asp-action="Create">Book Flight</a>
     </p>
 
     <table class="table">
@@ -54,8 +54,8 @@
                         <b> @Html.DisplayFor(modelItem => item.Date)</b>
                     </td>
                     <td>
-                        <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.TicketID">Edit</a> &nbsp;&nbsp;&nbsp;
-                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.TicketID">Delete</a>
+                        <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.TicketID">Modify</a> &nbsp;&nbsp;&nbsp;
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.TicketID">Cancel Reservation</a>
                     </td>
                 </tr>
             }
