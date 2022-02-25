@@ -56,10 +56,10 @@ namespace MVCRecap.Controllers
         {
 
             if (ModelState.IsValid)
-            {                
-                    _context.TicketModel.Add(ticket);
-                    _context.SaveChanges();
-                    return RedirectToAction("Index");                
+            {
+                _context.TicketModel.Add(ticket);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
             }
             else
                 return RedirectToAction("Create");
