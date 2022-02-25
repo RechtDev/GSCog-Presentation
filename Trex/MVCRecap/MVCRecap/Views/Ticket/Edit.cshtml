@@ -17,6 +17,11 @@
             <form asp-action="Edit">
                 <input type="hidden" asp-for="TicketID" />
                 <div class="form-group">
+                    <label asp-for="ClientName" class="control-label" style="font-weight:bold">Budget</label>
+                    <input asp-for="ClientName" class="form-control" />
+                    <span asp-validation-for="ClientName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
                     <label asp-for="Airline" class="control-label" style="font-weight:bold"></label>
                     <select asp-for="Airline"
                             class="form-control"
@@ -44,19 +49,24 @@
                     <span asp-validation-for="Destination" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="Cost" class="control-label" style="font-weight:bold"></label>
+                    <label asp-for="Cost" class="control-label" style="font-weight:bold">Budget</label>
                     <input asp-for="Cost" class="form-control" />
                     <span asp-validation-for="Cost" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="Date" class="control-label" style="font-weight:bold"></label>
-                    <input asp-for="Date" class="form-control" id="datePick"/>
-                    <span asp-validation-for="Date" class="text-danger"></span>
+                    <label asp-for="DepartDate" class="control-label" style="font-weight:bold"></label>
+                    <input asp-for="DepartDate" class="form-control" id="datePick" />
+                    <span asp-validation-for="DepartDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ReturnDate" class="control-label" style="font-weight:bold"></label>
+                    <input asp-for="ReturnDate" class="form-control" id="datePick" />
+                    <span asp-validation-for="ReturnDate" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <a class="btn btn-warning" asp-action="Index">Back to List</a>
                     &nbsp;&nbsp;&nbsp;
-                    <input type="submit" id="btnSubmit" value="Update" class="btn btn-success" />
+                    <input type="submit" id="btnSubmit" value="Modify" class="btn btn-success" />
                 </div>
             </form>
         </div>

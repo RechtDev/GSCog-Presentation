@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVCRecap.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20220224203950_timeupdate")]
-    partial class timeupdate
+    [Migration("20220225201853_TicketUpdate")]
+    partial class TicketUpdate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -67,10 +67,14 @@ namespace MVCRecap.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ClientName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double>("Cost")
                         .HasColumnType("float");
 
-                    b.Property<DateTime>("Date")
+                    b.Property<DateTime>("DepartDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Destination")
@@ -80,6 +84,9 @@ namespace MVCRecap.Migrations
                     b.Property<string>("Origin")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ReturnDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("TicketID");
 

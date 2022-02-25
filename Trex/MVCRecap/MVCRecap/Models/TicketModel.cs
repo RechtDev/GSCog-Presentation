@@ -12,6 +12,8 @@ namespace MVCRecap.Models
         [Key]
         public int TicketID { get; set; }
         [Required]
+        public string ClientName { get; set; }
+        [Required]
         public string Airline { get; set; }
         [Required]
         public string Origin { get; set; }
@@ -20,8 +22,10 @@ namespace MVCRecap.Models
         [Required]
         [DataType(DataType.Currency)]
         public double Cost { get; set; }
+        [Required]
         [DateValidation]
-        public DateTime Date { get; set; }
-
+        public DateTime DepartDate { get; set; }
+        [DateValidation]
+        public DateTime ReturnDate { get; set; }
     }
 }

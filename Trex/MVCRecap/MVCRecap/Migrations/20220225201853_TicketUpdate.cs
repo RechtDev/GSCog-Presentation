@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MVCRecap.Migrations
 {
-    public partial class timeupdate : Migration
+    public partial class TicketUpdate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -40,11 +40,13 @@ namespace MVCRecap.Migrations
                 {
                     TicketID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    ClientName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Airline = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Origin = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Destination = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Cost = table.Column<double>(type: "float", nullable: false),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    DepartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ReturnDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {

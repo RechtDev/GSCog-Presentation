@@ -54,6 +54,10 @@ namespace MVCRecap.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(TicketModel ticket)
         {
+            if(ticket.ReturnDate.Date.CompareTo(ticket.DepartDate.Date) <0)
+            {
+                return RedirectToAction("Create");
+            }
 
             if (ModelState.IsValid)
             {
@@ -102,6 +106,10 @@ namespace MVCRecap.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(TicketModel ticket)
         {
+            if (ticket.ReturnDate.Date.CompareTo(ticket.DepartDate.Date) < 0)
+            {
+                return RedirectToAction("Edit");
+            }
             if (ModelState.IsValid)
             {
                 _context.TicketModel.Update(ticket);
