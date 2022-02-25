@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCRecap.Models.ValidationClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace MVCRecap.Models
         [Required]
         [DataType(DataType.Currency)]
         public double Cost { get; set; }
+        [DateValidation]
         public DateTime Date { get; set; }
 
     }

@@ -15,7 +15,6 @@
     <div class="row">
         <div class="col-md-4">
             <form asp-action="Create" method="post">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
                     <label asp-for="Airline" class="control-label" style="font-weight:bold"></label>
                     <select asp-for="Airline"
@@ -51,7 +50,7 @@
                 <div class="form-group">
                     <label asp-for="Date" class="control-label" style="font-weight:bold"></label>
                     <input asp-for="Date" class="form-control" id="datePick" />
-                    <span asp-validation-for="Date" class="text-danger"></span>
+                    <span asp-validation-for="Date" class="text-danger" ></span>
                 </div>
                 <div class="form-group">
                     <a class="btn btn-warning" asp-action="Index">Back to List</a>
@@ -62,15 +61,6 @@
         </div>
     </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script>
-        $(function () {
-            $("#datePick").datepicker({
-                minDate: new Date()
-            });
-        });
-    </script>
     <script type="text/javascript">
         $(function () {
             $("#btnSubmit").click(function () {
@@ -80,13 +70,6 @@
                     alert("Origin and Destination must be different.");
                     return false;
                 }
-                var date = $("#datePick")
-                debugger;
-                if (date < Date.now) {
-                    alert("Must select a future date.");
-                    return false;
-                }
-
                 return true;
             });
         });
