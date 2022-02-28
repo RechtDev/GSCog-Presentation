@@ -1,6 +1,6 @@
-﻿.custom {
-    background-image: url("BlueSky.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+﻿.bluesky {
+    background-image: url('../Images/Blue_Sky.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
 }
 

@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 
-<body class="custom">
+<body class="bluesky">
     <h1>Edit</h1>
 
     <h4>TicketModel</h4>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="Cost" class="control-label" style="font-weight:bold">Budget</label>
-                    <input asp-for="Cost" class="form-control" />
+                    <input asp-for="Cost" type="number" placeholder="$0.00" min="0" step="0.01" class="form-control" />
                     <span asp-validation-for="Cost" class="text-danger"></span>
                 </div>
                 <div class="form-group">
