@@ -4,6 +4,7 @@
     ViewData["Title"] = "Book";
     <link rel="stylesheet" href="~/css/TrexStyle.css" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
 }
 <!DOCTYPE html>
 <html>
@@ -12,6 +13,7 @@
 
     <h4>TicketModel</h4>
     <hr />
+    <script type="text/javascript" src="~/js/site.js"></script>
     <div class="row">
         <div class="col-md-4">
             <form asp-action="Create" method="post">
@@ -47,9 +49,9 @@
                     </select>
                     <span asp-validation-for="Destination" class="text-danger"></span>
                 </div>
-                <div class="form-group">
+                <div class="form-group dollar">
                     <label asp-for="Cost" class="control-label" style="font-weight:bold">Budget</label>
-                    <input asp-for="Cost" type="number" placeholder="$0.00" min="0" step="0.01" class="form-control" />
+                    <input asp-for="Cost" type="text" id="money" placeholder="0.00" class="form-control" />
                     <span asp-validation-for="Cost" class="text-danger"></span>
                 </div>
                 <div class="form-group">
