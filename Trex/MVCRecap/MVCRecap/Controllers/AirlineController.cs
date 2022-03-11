@@ -20,7 +20,7 @@ namespace MVCRecap.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var airline = await _context.AirlineModel.ToListAsync();
+            var airline = await _context.Airline.ToListAsync();
             return View(airline);
         }
 

@@ -21,7 +21,7 @@ namespace MVCRecap.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var cityList = await _context.DestinationModel.ToListAsync();
+            var cityList = await _context.Destination.ToListAsync();
             return View(cityList);
         }
 

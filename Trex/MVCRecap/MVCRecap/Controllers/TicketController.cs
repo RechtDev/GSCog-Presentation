@@ -16,17 +16,17 @@ namespace MVCRecap.Controllers
         public TicketController(ApplicationDBContext context)
         {
             _context = context;
-        }
+        }AirlineModel
 
         public async Task<IActionResult> Index()
         {
-            var TikList = await _context.TicketModel.ToListAsync();
+            var TikList = await _context.Ticket.ToListAsync();
             return View(TikList);
         }
         public IActionResult Create()
         {
             List<Airline> tempList = new();
-            tempList = (from item in _context.AirlineModel
+            tempList = (from item in _context.Airline
                            select item).ToList();
 
             List<Airline> airlineList = new();
@@ -43,7 +43,7 @@ namespace MVCRecap.Controllers
             
 
             List<Destination> cityList = new List<Destination>();
-            cityList = (from item in _context.DestinationModel
+            cityList = (from item in _context.Destination
                         select item).ToList();
 
             ViewBag.ListofAirlines = airlineList;
@@ -61,7 +61,7 @@ namespace MVCRecap.Controllers
 
             if (ModelState.IsValid)
             {
-                _context.TicketModel.Add(ticket);
+                _context.Ticket.Add(ticket);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -71,14 +71,14 @@ namespace MVCRecap.Controllers
 
         public async Task<IActionResult> Edit(int? id)
         {
-            var ticket = await _context.TicketModel.FindAsync(id);
+            var ticket = await _context.Ticket.FindAsync(id);
             if (id == null)
             {
                 return NotFound();
             }
 
             List<Airline> tempList = new();
-            tempList = (from item in _context.AirlineModel
+            tempList = (from item in _context.Airline
                         select item).ToList();
 
             List<Airline> airlineList = new();
@@ -94,7 +94,7 @@ namespace MVCRecap.Controllers
             tempList = null;
 
             List<Destination> cityList = new List<Destination>();
-            cityList = (from item in _context.DestinationModel
+            cityList = (from item in _context.Destination
                         select item).ToList();
 
             ViewBag.ListofAirlines = airlineList;
@@ -112,7 +112,7 @@ namespace MVCRecap.Controllers
             }
             if (ModelState.IsValid)
             {
-                _context.TicketModel.Update(ticket);
+                _context.Ticket.Update(ticket);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -122,7 +122,7 @@ namespace MVCRecap.Controllers
 
         public async Task<IActionResult> Delete(int? id)
         {
-            var ticket = await _context.TicketModel.FindAsync(id);
+            var ticket = await _context.Ticket.FindAsync(id);
             if (id == null)
             {
                 return NotFound();
@@ -134,10 +134,10 @@ namespace MVCRecap.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
-            var ticket = await _context.TicketModel.FindAsync(id);
+            var ticket = await _context.Ticket.FindAsync(id);
             if (ModelState.IsValid)
             {
-                _context.TicketModel.Remove(ticket);
+                _context.Ticket.Remove(ticket);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
