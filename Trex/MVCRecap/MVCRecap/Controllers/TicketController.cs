@@ -16,7 +16,7 @@ namespace MVCRecap.Controllers
         public TicketController(ApplicationDBContext context)
         {
             _context = context;
-        }AirlineModel
+        }
 
         public async Task<IActionResult> Index()
         {
@@ -40,9 +40,9 @@ namespace MVCRecap.Controllers
             }
             tempList = null;
 
-            
 
-            List<Destination> cityList = new List<Destination>();
+
+            List<Destination> cityList = new();
             cityList = (from item in _context.Destination
                         select item).ToList();
 
@@ -93,7 +93,7 @@ namespace MVCRecap.Controllers
             }
             tempList = null;
 
-            List<Destination> cityList = new List<Destination>();
+            List<Destination> cityList = new();
             cityList = (from item in _context.Destination
                         select item).ToList();
 
