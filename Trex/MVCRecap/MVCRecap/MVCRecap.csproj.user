@@ -11,5 +11,6 @@
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>False</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_DbContextTypeFullName>MVCRecap.Data.ApplicationDBContext</WebStackScaffolding_DbContextTypeFullName>
+    <NameOfLastUsedPublishProfile>C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\Properties\PublishProfiles\VacaPlannerWebApp - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

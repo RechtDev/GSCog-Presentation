@@ -25,11 +25,11 @@ namespace MVCRecap.Controllers
         }
         public IActionResult Create()
         {
-            List<AirlineModel> tempList = new();
+            List<Airline> tempList = new();
             tempList = (from item in _context.AirlineModel
                            select item).ToList();
 
-            List<AirlineModel> airlineList = new();
+            List<Airline> airlineList = new();
 
             foreach (var item in tempList)
             {
@@ -42,7 +42,7 @@ namespace MVCRecap.Controllers
 
             
 
-            List<DestinationModel> cityList = new List<DestinationModel>();
+            List<Destination> cityList = new List<Destination>();
             cityList = (from item in _context.DestinationModel
                         select item).ToList();
 
@@ -52,7 +52,7 @@ namespace MVCRecap.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(TicketModel ticket)
+        public IActionResult Create(Ticket ticket)
         {
             if(ticket.ReturnDate.Date.CompareTo(ticket.DepartDate.Date) <0)
             {
@@ -77,11 +77,11 @@ namespace MVCRecap.Controllers
                 return NotFound();
             }
 
-            List<AirlineModel> tempList = new();
+            List<Airline> tempList = new();
             tempList = (from item in _context.AirlineModel
                         select item).ToList();
 
-            List<AirlineModel> airlineList = new();
+            List<Airline> airlineList = new();
 
 
             foreach (var item in tempList)
@@ -93,7 +93,7 @@ namespace MVCRecap.Controllers
             }
             tempList = null;
 
-            List<DestinationModel> cityList = new List<DestinationModel>();
+            List<Destination> cityList = new List<Destination>();
             cityList = (from item in _context.DestinationModel
                         select item).ToList();
 
@@ -104,7 +104,7 @@ namespace MVCRecap.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(TicketModel ticket)
+        public IActionResult Edit(Ticket ticket)
         {
             if (ticket.ReturnDate.Date.CompareTo(ticket.DepartDate.Date) < 0)
             {

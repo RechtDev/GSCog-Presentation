@@ -13,8 +13,8 @@ namespace MVCRecap.Data
         {
 
         }
-        public DbSet<AirlineModel> AirlineModel { get; set; }
-        public DbSet<DestinationModel> DestinationModel { get; set; }
-        public DbSet<MVCRecap.Models.TicketModel> TicketModel { get; set; }
+        public DbSet<Airline> AirlineModel { get; set; }
+        public DbSet<Destination> DestinationModel { get; set; }
+        public DbSet<MVCRecap.Models.Ticket> TicketModel { get; set; }
     }
 }
