@@ -1,0 +1,25 @@
+﻿.bluesky {
+    background-image: url('../Images/Blue_Sky2.webp');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dollar {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.dollar input {
+    padding-left: 15px;
+}
+
+.dollar:before {
+    position: absolute;
+    content: "$";
+    left: 7px;
+    top: 39px;
+}
+
+

@@ -1,0 +1,33 @@
+﻿@model MVCRecap.Data.DTOs.UserLoginDTO
+@{
+    ViewData["Title"] = "Login";
+    <link rel="stylesheet" href="~/css/LoginFormStyle.css" />
+    <link rel="stylesheet" href="~/css/Background.css" />
+
+}
+
+<!DOCTYPE html>
+<body class="bluesky">
+    <div class="login-form-container">
+        <h1>Login</h1>
+        <div class="login-form-display">
+            <form class="login-form" action="Login" method="post">
+                <div class="input-form-30m">
+                    <strong><label asp-for="Email" class="col-form-label"></label></strong>
+                    <input asp-for="Email" type="text" class="input-group" placeholder="Email" autocomplete="on" autofocus />
+                    <p><span class="text-warning" asp-validation-for="Email"></span></p>
+                </div>
+                <div class="input-form-30m">
+                    <strong><label asp-for="Password" class="col-form-label"></label></strong>
+                    <input asp-for="Password" type="password" class="input-group" placeholder="Password" />
+                    <p><span asp-validation-for="Password" class="text-warning"></span></p>
+                </div>
+                <div class="login-form-panel">
+                    <button type="submit" class="btn btn-success">Login</button>
+                </div>
+                <br />
+                <p>Don't have an account? <a asp-action="Register" asp-controller="account">Click Here</a></p>
+            </form>
+        </div>
+    </div>
+</body>

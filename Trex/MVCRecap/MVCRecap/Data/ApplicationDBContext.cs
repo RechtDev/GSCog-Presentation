@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using MVCRecap.Models;
+using MVCRecap.Models.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +9,11 @@ using System.Threading.Tasks;
 
 namespace MVCRecap.Data
 {
-    public class ApplicationDBContext : DbContext
+    public class ApplicationDBContext : IdentityDbContext<AppUser>
     {
+        public ApplicationDBContext()
+        {
+        }
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
         {
 

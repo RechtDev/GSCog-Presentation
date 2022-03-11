@@ -1,0 +1,41 @@
+﻿@model MVCRecap.Data.DTOs.UserRegistrationDto
+@{
+    ViewData["Title"] = "Register";
+    <link rel="stylesheet" href="~/css/Background.css" />
+    <link rel="stylesheet" href="~/css/RegistrationFormStyles.css" />
+}
+<!DOCTYPE html>
+<body class="bluesky">
+    <div class="login-form-container">
+        <h1>Create  a New Account!</h1>
+        <div class="login-form-display">
+
+            <form class="login-form" action="register" method="post">
+                <div class="input-form-30m">
+                    <label asp-for="Email" class="col-form-label"></label>
+                    <input asp-for="Email" class="form-control" placeholder="Email" />
+                    <p><span asp-validation-for="Email" class="text-warning"></span></p>
+                </div>
+                <div class="input-form-30m">
+                    <label asp-for="UserName" class="col-form-label"></label>
+                    <input asp-for="UserName" class="form-control" placeholder="User Name" />
+                    <p><span asp-validation-for="UserName" class="text-warning"></span></p>
+                </div>
+                <div class="input-form-30m">
+                    <label asp-for="Password" class="col-form-label"></label>
+                    <input asp-for="Password" class="form-control" placeholder="Password" />
+                    <p><span asp-validation-for="Password" class="text-warning"></span></p>
+                </div>
+                <div class="input-form-30m">
+                    <label asp-for="ConfrimPassword" class="col-form-label"></label>
+                    <input asp-for="ConfrimPassword" type="password" class="form-control" placeholder="Retype Password" />
+                    <p><span asp-validation-for="ConfrimPassword" class="text-warning"></span></p>
+                </div>
+                <button type="submit" class="btn btn-success">SIgn Up!</button>
+                <br />
+                <br />
+                <p>Already have an account? <a asp-action="Login" asp-controller="account">Login in!</a></p>
+            </form>
+        </div>
+    </div>
+</body>

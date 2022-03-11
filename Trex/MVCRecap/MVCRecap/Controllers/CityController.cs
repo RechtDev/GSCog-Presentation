@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MVCRecap.Data;
 using System;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MVCRecap.Controllers
 {
-    
+    [Authorize]
     public class CityController : Controller
     {
 
