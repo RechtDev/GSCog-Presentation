@@ -9,11 +9,16 @@
 <body class="bluesky">
     <h1 style="margin-bottom: 50px">Active Tickets</h1>
 
-    <p>
-        <a class="btn btn-success" asp-action="Create">Book Flight</a>
-    </p>
+    
+    <div class="table-panel">
+        <p>
+            <a class="btn btn-success" asp-action="Create">Book Flight</a>
+        </p>
 
-    <table class="table">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
+    </div>
+
+    <table class="table" id="myTable">
         <thead style="background-color: deepskyblue; border-collapse: collapse; border-bottom: 1px solid black">
             <tr>
                 <th style="border-top: 1px solid deepskyblue; border-bottom: 2px solid black">
@@ -46,38 +51,65 @@
         <tbody style="background-color: lightskyblue">
             @foreach (var item in Model)
             {
-            <tr>
-                <td>
-                    <b>@Html.DisplayFor(modelItem => item.TicketID)</b>
-                </td>
-                <td>
-                    <b>@Html.DisplayFor(modelItem => item.ClientName)</b>
-                </td>
-                <td>
-                    <b>@Html.DisplayFor(modelItem => item.Airline)</b>
-                </td>
-                <td>
-                    <b> @Html.DisplayFor(modelItem => item.Origin)</b>
-                </td>
-                <td>
-                    <b> @Html.DisplayFor(modelItem => item.Destination)</b>
-                </td>
-                <td>
-                    <b> @Html.DisplayFor(modelItem => item.Cost)</b>
-                </td>
-                <td>
-                    <b> @Html.DisplayFor(modelItem => item.DepartDate)</b>
-                </td>
-                <td>
-                    <b> @Html.DisplayFor(modelItem => item.ReturnDate)</b>
-                </td>
-                <td>
-                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.TicketID">Modify</a> &nbsp;&nbsp;
-                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.TicketID">Cancel</a>
-                </td>
-            </tr>
+                <tr>
+                    <td>
+                        <b>@Html.DisplayFor(modelItem => item.TicketID)</b>
+                    </td>
+                    <td>
+                        <b>@Html.DisplayFor(modelItem => item.ClientName)</b>
+                    </td>
+                    <td>
+                        <b>@Html.DisplayFor(modelItem => item.Airline)</b>
+                    </td>
+                    <td>
+                        <b> @Html.DisplayFor(modelItem => item.Origin)</b>
+                    </td>
+                    <td>
+                        <b> @Html.DisplayFor(modelItem => item.Destination)</b>
+                    </td>
+                    <td>
+                        <b> @Html.DisplayFor(modelItem => item.Cost)</b>
+                    </td>
+                    <td>
+                        <b> @Html.DisplayFor(modelItem => item.DepartDate)</b>
+                    </td>
+                    <td>
+                        <b> @Html.DisplayFor(modelItem => item.ReturnDate)</b>
+                    </td>
+                    <td>
+                        <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.TicketID">Modify</a> &nbsp;&nbsp;
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.TicketID">Cancel</a>
+                    </td>
+                </tr>
             }
         </tbody>
     </table>
+
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                for (var j = 0; j < 7; j++) {
+                    td = tr[i].getElementsByTagName("td")[j];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            break;
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>
