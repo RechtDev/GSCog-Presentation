@@ -17,12 +17,12 @@ namespace MVCRecap.Data.DTOs
         [Required(ErrorMessage = "Email is required")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Email is required")]
+        [Required(ErrorMessage = "Password is required")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
         [Required(ErrorMessage = "Confirm password is required")]
-        [Compare("Password", ErrorMessage = "The password and confirm Password do not match")]
-        public string ConfrimPassword { get; set; }
+        [Compare("Password", ErrorMessage = "The passwords do not match")]
+        public string ConfirmPassword { get; set; }
     }
 }

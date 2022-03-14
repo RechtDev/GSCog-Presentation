@@ -1,8 +1,11 @@
 C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\MVCRecap.exe
+C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\wwwroot\css\Background.css
+C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\wwwroot\css\LoginFormStyle.css
+C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\wwwroot\css\RegistrationFormStyles.css
 C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\wwwroot\css\site.css
 C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\wwwroot\css\style.css
-C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\wwwroot\css\TrexStyle.css
 C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\wwwroot\Images\Blue_Sky.jpg
+C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\wwwroot\Images\Blue_Sky2.webp
 C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\wwwroot\Images\favicon.ico
 C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\wwwroot\Images\user.png
 C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\wwwroot\js\site.js
@@ -47,6 +50,7 @@ C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRec
 C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\Humanizer.dll
 C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
 C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Identity.UI.dll
 C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll

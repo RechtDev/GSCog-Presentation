@@ -438,3 +438,7 @@ C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRec
 C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\ref\MVCRecap.dll
 C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\MVCRecap.pdb
 C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\MVCRecap.genruntimeconfig.cache
+C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\bin\Release\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\Trexe\OneDrive\Documents\GitHub\GSCog-Presentation\Trex\MVCRecap\MVCRecap\obj\Release\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
